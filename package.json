@@ -15,6 +15,7 @@
     "start": "brunch watch --server"
   },
   "dependencies": {
+    "phonegap": "latest",
     "clean-css-brunch": "latest",
     "css-brunch": "latest",
     "handlebars-brunch": "latest",
