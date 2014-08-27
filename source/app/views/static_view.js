@@ -1,11 +1,11 @@
-var PageView = require('./page_view');
+var PageView = require(ROOT_PATH + 'views/page_view');
 
 module.exports = PageView.extend({
   id        : 'static-view',
   className : '',
   container : '.content',
-  template  : require('../templates/static'),
-  header    : require('../templates/headers/static'),
+  template  : require(ROOT_PATH + 'templates/static'),
+  header    : require(ROOT_PATH + 'templates/headers/static'),
 
   initialize: function() {}
 });

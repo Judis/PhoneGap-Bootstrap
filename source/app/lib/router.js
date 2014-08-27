@@ -1,4 +1,4 @@
-var application = require('application')
+var application = require(ROOT_PATH + 'application');
 
 module.exports = Backbone.Router.extend({
   routes: {

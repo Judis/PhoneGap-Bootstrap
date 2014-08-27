@@ -19,7 +19,10 @@
     <script type="text/javascript" src="javascripts/vendor.js"></script>
     <script type="text/javascript" src="javascripts/app.js"></script>
 
-    <script>require('initialize')</script>
+    <script>
+      var ROOT_PATH = 'source/app/';
+      require(ROOT_PATH + 'initialize');
+    </script>
   </head>
   <body>
     <!-- Make sure all your bars are the first things in your <body> -->
