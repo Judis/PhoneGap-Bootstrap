@@ -2,17 +2,25 @@
 
 Simple bootstrap for Phonegap HTML5 Application with [Brunch](http://brunch.io), [Backbone.JS](http://backbonejs.org), [Ratchet](http://goratchet.com/)
 
-### How to use? ###
+### How to install? ###
 
 * install [Node JS](http://nodejs.org/)
 * install [NPM](https://github.com/npm/npm)
-* install [PhoneGap](http://phonegap.com/install/)
-* install [Brunch](http://brunch.io/)
 * clone this repository
 * go to repository folder and run:
 
 ```
-cd source && npm install
+npm install
 ```
 
-* add platforms for PhoneGap
+### How to use? ###
+
+## Prepare ##
+
+* Install needed PhoneGap platforms
+* Change config.xml (/source/app/assets/config.xml) and config.json (.cordova/config.json)
+* Upload your icons and splashscreens (/source/app/res)
+
+## Workflow ##
+
+You can run watcher (brunch w) or build app manualy (brunch b)
