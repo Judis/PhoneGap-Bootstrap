@@ -12,7 +12,7 @@
     "node": "latest"
   },
   "scripts": {
-    "start": "brunch watch --server"
+    "start": "brunch watch"
   },
   "dependencies": {
     "phonegap": "latest",

@@ -38,5 +38,6 @@ exports.config =
 
   plugins:
     afterBrunch: [
-      'phonegap build ios'
+      # Plase here commands for build local apps
+      # 'phonegap build ios'
     ]
