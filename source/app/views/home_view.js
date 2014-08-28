@@ -1,11 +1,11 @@
-var PageView = require(ROOT_PATH + 'views/page_view');
+var PageView = require('views/page_view');
 
 module.exports = PageView.extend({
   id        : 'home-view',
   className : '',
   container : '.content',
-  template  : require(ROOT_PATH + 'templates/home'),
-  header    : require(ROOT_PATH + 'templates/headers/home'),
+  template  : require('templates/home'),
+  header    : require('templates/headers/home'),
 
   initialize: function() {}
 });

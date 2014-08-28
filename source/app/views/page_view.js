@@ -1,4 +1,4 @@
-var View = require(ROOT_PATH + 'views/view');
+var View = require('views/view');
 
 module.exports = View.extend({
   header_container: $('.bar'),

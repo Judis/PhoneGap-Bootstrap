@@ -1,4 +1,4 @@
-require(ROOT_PATH+'lib/view_helper')
+require('lib/view_helper')
 
 // Base class for all views
 module.exports = Backbone.View.extend({

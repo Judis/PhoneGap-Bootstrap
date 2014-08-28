@@ -1,11 +1,11 @@
-var PageView = require(ROOT_PATH + 'views/page_view');
+var PageView = require('views/page_view');
 
 module.exports = PageView.extend({
   id        : 'form-view',
   className : '',
   container : '.content',
-  template  : require(ROOT_PATH + 'templates/form'),
-  header    : require(ROOT_PATH + 'templates/headers/form'),
+  template  : require('templates/form'),
+  header    : require('templates/headers/form'),
 
   initialize: function() {}
 });

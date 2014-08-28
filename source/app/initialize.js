@@ -1,4 +1,4 @@
-var application = require(ROOT_PATH + 'application');
+var application = require('application');
 
 document.addEventListener(
   'deviceready',

@@ -16,6 +16,7 @@ exports.config =
         'test/javascripts/test-vendor.js': /^source\/test[\\/](?=source\/vendor)/
       order:
         before: [
+          'source/vendor/scripts/require.js'
           'source/vendor/scripts/jquery-2.1.1.js'
           'source/vendor/scripts/underscore.js'
           'source/vendor/scripts/backbone.js'
