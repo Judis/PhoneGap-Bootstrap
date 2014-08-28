@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "phonegap": "latest",
+    "shelljs": "latest",
     "clean-css-brunch": "latest",
     "css-brunch": "latest",
     "handlebars-brunch": "latest",
