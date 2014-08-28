@@ -5,3 +5,7 @@ plugins/*
 !plugins/.gitkeep
 www/*
 !www/.gitkeep
+
+build.zip
+app.apk
+app.ipa
