@@ -27,7 +27,7 @@ You can run watcher (brunch w) or build app manualy (brunch b)
 You can use deploy.sh script for build your application on build.phonegap.com cloud and provide app for testers with testflightapp.com (iOS) and testfairy.com (Android)
 
 ### Dependencies ###
-For correct work deploy scrip you need installed (jsontool)[https://github.com/trentm/json]
+For correct work deploy scrip you need installed [jsontool](https://github.com/trentm/json)
 
 ### Prepare ###
 Open deploy.sh and put your Adobe ID account data (email and password) and API keys for Testflightapp.com and testfairy.com
