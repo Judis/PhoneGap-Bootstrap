@@ -13,11 +13,7 @@ case "$1" in
     ;;
 
   status)
-    curl -s -u $EMAIL:$PASSWORD https://build.phonegap.com/api/v1/apps/$APP_ID | json status
-    ;;
-
-  status_not_formatted)
-    curl -s -u $EMAIL:$PASSWORD https://build.phonegap.com/api/v1/apps/$APP_ID
+    curl -s -u $EMAIL:$PASSWORD https://build.phonegap.com/api/v1/apps/$APP_ID | grep -o '"status":{[[a-zA-Z":,.]*}'
     ;;
 
   build_and_publish)
@@ -58,8 +54,8 @@ case "$1" in
     echo
     echo "Deploying to $platform"
     while [[ true ]]; do
-      output=`./deploy.sh status_not_formatted`
-      echo $output | grep \"$platform\":\"complete\" && break || echo $output | grep -o '"status":{[[a-zA-Z":,.]*}' && sleep 5;
+      output=`./deploy.sh status`
+      echo $output | grep \"$platform\":\"complete\" && break || echo $output && sleep 5;
     done
     ./deploy.sh publish $platform
     ;;
