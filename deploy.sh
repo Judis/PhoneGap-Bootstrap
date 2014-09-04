@@ -13,7 +13,51 @@ case "$1" in
     ;;
 
   status)
-    curl -u $EMAIL:$PASSWORD https://build.phonegap.com/api/v1/apps/$APP_ID | json status
+    curl -s -u $EMAIL:$PASSWORD https://build.phonegap.com/api/v1/apps/$APP_ID | grep -o '"status":{[[a-zA-Z":,.]*}'
+    ;;
+
+  build_and_publish)
+    case "$2" in
+      ios)
+        platforms=(ios)
+        ;;
+      android)
+        platforms=(android)
+        ;;
+      both)
+        platforms=(android ios)
+        ;;
+      *)
+        echo $"Usage: $0 $1 {ios|android|both}"
+        exit 1
+    esac
+
+    ./deploy.sh build
+    for platform in ${platforms[*]}
+    do
+      ./deploy.sh check_and_publish $platform
+    done
+    ;;
+
+  check_and_publish)
+    case "$2" in
+      ios)
+        platform=ios
+        ;;
+      android)
+        platform=android
+        ;;
+      *)
+        echo $"Usage: $0 $1 {ios|android}"
+        exit 1
+    esac
+    echo
+    echo "Deploying to $platform"
+    while [[ true ]]; do
+      output=`./deploy.sh status`
+      echo $output | grep \"$platform\":\"complete\" && break || echo $output && sleep 5;
+    done
+    ./deploy.sh publish $platform
     ;;
 
   publish)
