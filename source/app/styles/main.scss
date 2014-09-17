@@ -1,3 +1,18 @@
 img{
   max-width: 100%;
 }
+
+body{
+  background: #eee;
+}
+
+.bar-nav{
+  background: #eee;
+}
+
+body.ios{
+  margin-top: 20px;
+  .bar-nav{
+    margin-top: 20px;
+  }
+}
